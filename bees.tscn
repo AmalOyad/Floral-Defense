@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgn7gvoehryme"]
+
+[ext_resource type="Texture2D" uid="uid://dgid255bighpk" path="res://bee-spritesheet.png" id="1_pufxi"]
+[ext_resource type="Script" uid="uid://db6eirlq10o1f" path="res://bees.gd" id="2_6lmwd"]
+
+[node name="Bees" type="Sprite2D"]
+position = Vector2(600, 400)
+scale = Vector2(0.361388, -0.346054)
+texture = ExtResource("1_pufxi")
+region_enabled = true
+region_rect = Rect2(0, 0, 548, 460)
+script = ExtResource("2_6lmwd")

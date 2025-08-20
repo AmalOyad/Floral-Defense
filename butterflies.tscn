@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj5yx6usrsv8k"]
+
+[ext_resource type="Texture2D" uid="uid://2b3ekx4x5lx8" path="res://butterfly-spritesheet.png" id="1_2itrc"]
+
+[node name="Butterflies" type="Sprite2D"]
+texture = ExtResource("1_2itrc")

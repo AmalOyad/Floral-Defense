@@ -9,7 +9,7 @@ script = ExtResource("1_coxr3")
 
 [node name="Butterfly-spritesheet" type="Sprite2D" parent="."]
 position = Vector2(520, 312)
-scale = Vector2(1, 1.07)
+scale = Vector2(0.175, 0.187)
 texture = ExtResource("1_ttby1")
 region_enabled = true
 region_rect = Rect2(36, 0, 560, 430)

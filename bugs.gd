@@ -1,7 +1,15 @@
-extends Sprite2D
+extends Area2D
 
-var frames = texture.get_width() / region_rect.size.x
+@export var speed := 100
+var target: Node2D = null
+var stopped := false
 
-func _ready():
-	var random_index = randi_range(0, frames - 1)
-	region_rect.position.x = random_index * region_rect.size.x
+func _process(delta):
+	if target and not stopped:
+		var direction = (target.global_position - global_position).normalized()
+		position += direction * speed * delta
+
+func _on_area_entered(area):
+	if area.is_in_group("flower") or area.name == "Flower":
+		stopped = true
+		speed = 0

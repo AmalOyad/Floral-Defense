@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://rify5rhmk5ek"]
+[gd_scene load_steps=4 format=3 uid="uid://rify5rhmk5ek"]
 
-[ext_resource type="Texture2D" uid="uid://b3ixofgvotksi" path="res://bug-spritesheet.png" id="1_m2gnm"]
+[ext_resource type="Texture2D" uid="uid://cioyr7mbnmnuh" path="res://bug-b.png" id="2_0v0sd"]
 [ext_resource type="Script" uid="uid://c4bbmcacaeexx" path="res://bugs.gd" id="2_xup0k"]
 
-[node name="Bugs" type="Sprite2D"]
-position = Vector2(600, 400)
-scale = Vector2(0.285575, 0.283341)
-texture = ExtResource("1_m2gnm")
-region_enabled = true
-region_rect = Rect2(0, 0, 620, 405)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8p6ix"]
+size = Vector2(104, 52)
+
+[node name="Bugs" type="Area2D"]
 script = ExtResource("2_xup0k")
+
+[node name="bug-sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.148, 0.148)
+texture = ExtResource("2_0v0sd")
+region_rect = Rect2(620, 0, 620, 405)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8p6ix")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

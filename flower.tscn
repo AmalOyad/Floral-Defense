@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwkjsdx2j4in1"]
+
+[ext_resource type="Texture2D" uid="uid://cqi7pcu8f8tg4" path="res://flower.png" id="2_511j0"]
+
+[node name="Flower" type="CharacterBody2D" groups=["flower"]]
+
+[node name="flower-sprite" type="Sprite2D" parent="." groups=["flower"]]
+texture = ExtResource("2_511j0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["flower"]]
+polygon = PackedVector2Array(-184, -270, -140, -338, -25, -354, 92, -295, 103, -269, 103, -120, -5, -3, 39, 167, 78, 84, 135, 61, 188, 55, 184, 188, 170, 284, 78, 353, -41, 358, -157, 265, -182, 155, -163, 112, -53, 187, -95, 112, -92, 4, -189, -123)

@@ -1,10 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnglhteff4gja"]
+[gd_scene load_steps=5 format=3 uid="uid://cnglhteff4gja"]
 
-[ext_resource type="Texture2D" uid="uid://cqi7pcu8f8tg4" path="res://flower.png" id="1_iwpey"]
+[ext_resource type="Texture2D" uid="uid://dv64fkh24i4oh" path="res://main-scene-bg.jpeg" id="1_g4qto"]
+[ext_resource type="PackedScene" uid="uid://bwkjsdx2j4in1" path="res://flower.tscn" id="2_hr5et"]
+[ext_resource type="Script" uid="uid://cmntoq6ngdw6g" path="res://bug_spawner.gd" id="3_61od6"]
+[ext_resource type="PackedScene" uid="uid://rify5rhmk5ek" path="res://bugs.tscn" id="4_6mfv6"]
 
-[node name="Node2D" type="Node2D"]
+[node name="mainscene" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(574, 485)
+position = Vector2(578, 324)
+scale = Vector2(0.883, 0.883)
+texture = ExtResource("1_g4qto")
+metadata/_edit_lock_ = true
+
+[node name="Flower" parent="." instance=ExtResource("2_hr5et")]
+position = Vector2(600, 470)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_iwpey")
+
+[node name="bug_spawner" type="Node2D" parent="." node_paths=PackedStringArray("flower")]
+script = ExtResource("3_61od6")
+bug_scene = ExtResource("4_6mfv6")
+flower = NodePath("../Flower")

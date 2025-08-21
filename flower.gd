@@ -12,8 +12,10 @@ func _process(delta):
 		velocity.x = -speed
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x = +speed
-		
-	
+	if position > Vector2(1200,500):
+		position = Vector2(0,500)
+	elif position < Vector2(0,500):
+		position = Vector2(1200,500)
 	move_and_slide()
 
 

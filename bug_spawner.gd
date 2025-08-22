@@ -2,8 +2,8 @@ extends Node2D
 
 @export var bug_scene: PackedScene
 @export var flower: Node2D
-@export var spawn_delay_range := Vector2(1, 3)
-@export var spawn_area: Rect2 = Rect2(0,0,1920,50)
+@export var spawn_delay_range := Vector2(0.5, 2)
+@export var spawn_area: Rect2 = Rect2(0,0,1920,80)
 
 var timer := 0.0
 var next_spawn := 0.0

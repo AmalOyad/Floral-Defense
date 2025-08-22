@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c4bbmcacaeexx" path="res://bugs.gd" id="2_xup0k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8p6ix"]
-size = Vector2(104, 52)
+size = Vector2(95, 24)
 
 [node name="Bugs" type="Area2D"]
 script = ExtResource("2_xup0k")
@@ -15,6 +15,7 @@ texture = ExtResource("2_0v0sd")
 region_rect = Rect2(620, 0, 620, 405)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, 0)
 shape = SubResource("RectangleShape2D_8p6ix")
 
 [connection signal="body_entered" from="." to="." method="_on_bug_body_entered"]

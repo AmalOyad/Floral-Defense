@@ -9,6 +9,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gmbdk")
@@ -40,5 +44,30 @@ scale = Vector2(0.5, 0.5)
 mouse_default_cursor_shape = 2
 icon = ExtResource("2_gmbdk")
 metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 413.0
+offset_right = 1105.0
+offset_bottom = 637.0
+scale = Vector2(1.05, 1.05)
+text = "Tips:
+- Dont let any of the insects destory your flower!
+- click on the insects to kill them
+- try and click all the different insects and see what makes you win!
+Good Luck!"
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 255.0
+offset_right = 279.0
+offset_bottom = 460.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.449633, 0.372055, 0.0282857, 1)
+text = "Welcome, little pollinator! Your mission is simple: help the flowers bloom by collecting 100 pollen grains. But beware—the garden is full of sneaky bugs! Gather wisely, and may your wings be swift."
+autowrap_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

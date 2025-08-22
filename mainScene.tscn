@@ -1,15 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnglhteff4gja"]
+[gd_scene load_steps=9 format=3 uid="uid://cnglhteff4gja"]
 
 [ext_resource type="Script" uid="uid://dghmrxgdjrb0r" path="res://game_manager.gd" id="1_2qqqv"]
 [ext_resource type="Texture2D" uid="uid://dv64fkh24i4oh" path="res://main-scene-bg.jpeg" id="1_g4qto"]
 [ext_resource type="PackedScene" uid="uid://bwkjsdx2j4in1" path="res://flower.tscn" id="2_hr5et"]
-[ext_resource type="Script" path="res://bug_spawner.gd" id="3_61od6"]
+[ext_resource type="Script" uid="uid://cmntoq6ngdw6g" path="res://bug_spawner.gd" id="3_61od6"]
 [ext_resource type="PackedScene" uid="uid://rify5rhmk5ek" path="res://bugs.tscn" id="4_6mfv6"]
-
-[ext_resource type="PackedScene" uid="uid://dkg4wbhthwutd" path="res://butterfly_spawner.tscn" id="5_6mfv6"]
-
 [ext_resource type="Texture2D" uid="uid://2bv7ock784i0" path="res://heart.png" id="6_we1jl"]
-
+[ext_resource type="Script" uid="uid://drqo6uj6mdgeg" path="res://butterfly_spawner.gd" id="7_we1jl"]
+[ext_resource type="PackedScene" uid="uid://by1hvf03uf4u4" path="res://butterfly.tscn" id="8_bnlnp"]
 
 [node name="mainscene" type="Node2D"]
 
@@ -28,11 +26,6 @@ scale = Vector2(0.3, 0.3)
 [node name="bug_spawner" type="Node2D" parent="."]
 script = ExtResource("3_61od6")
 bug_scene = ExtResource("4_6mfv6")
-
-flower = NodePath("../Flower")
-
-[node name="ButterflySpawner" parent="." instance=ExtResource("5_6mfv6")]
-
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -66,3 +59,25 @@ texture = ExtResource("6_we1jl")
 layout_mode = 2
 texture = ExtResource("6_we1jl")
 
+[node name="Label" type="Label" parent="UI"]
+offset_left = 908.0
+offset_top = 19.0
+offset_right = 965.0
+offset_bottom = 42.0
+scale = Vector2(3, 3)
+text = "Pollen: "
+horizontal_alignment = 2
+
+[node name="Scorelabel" type="Label" parent="UI"]
+offset_left = 1062.0
+offset_top = 22.0
+offset_right = 1085.0
+offset_bottom = 45.0
+scale = Vector2(3, 3)
+text = "00"
+horizontal_alignment = 2
+
+[node name="butterfly_spawner" type="Node2D" parent="." node_paths=PackedStringArray("flower")]
+script = ExtResource("7_we1jl")
+butterfly_scene = ExtResource("8_bnlnp")
+flower = NodePath("../Flower")

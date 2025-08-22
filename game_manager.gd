@@ -17,11 +17,7 @@ func lose_heart():
 		game_over()
 	
 func game_over():
-	print("GAME OVER!") # Add the pop up for game over - you lose here
-	for bug in get_tree().get_nodes_in_group("bugs"):
-		bug.speed = 0
-	for butterfly in get_tree().get_nodes_in_group("butterflies"):
-		butterfly.speed = 0
+	get_tree().change_scene_to_file("res://gameOver.tscn")
 	
 
 func win():

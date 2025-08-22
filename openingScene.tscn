@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dbkrqghev8fx5" path="res://background.jpeg" id="1_pdf1p"]
 [ext_resource type="Texture2D" uid="uid://c3ktxlwi176ev" path="res://button.png" id="2_gmbdk"]
 
-[node name="Control" type="Control"]
+[node name="opening_scene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ expand_mode = 5
 stretch_mode = 5
 metadata/_edit_lock_ = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Start" type="Button" parent="."]
 custom_minimum_size = Vector2(115, 0)
 layout_direction = 1
 layout_mode = 1
@@ -70,4 +70,4 @@ theme_override_colors/font_color = Color(0.449633, 0.372055, 0.0282857, 1)
 text = "Welcome, little pollinator! Your mission is simple: help the flowers bloom by collecting 100 pollen grains. But beware—the garden is full of sneaky bugs! Gather wisely, and may your wings be swift."
 autowrap_mode = 2
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_button_pressed"]

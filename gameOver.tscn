@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7r6w1qdgmmsw"]
+
+[ext_resource type="Script" uid="uid://65lqks7dceua" path="res://gameOver.gd" id="1_xlotp"]
+
+[node name="GAME OVER" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xlotp")
+
+[node name="Game Over" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

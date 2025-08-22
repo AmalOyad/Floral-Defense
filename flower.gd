@@ -17,5 +17,3 @@ func _process(delta):
 	elif position < Vector2(0,500):
 		position = Vector2(1200,500)
 	move_and_slide()
-
-

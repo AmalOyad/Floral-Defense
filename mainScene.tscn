@@ -1,26 +1,68 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnglhteff4gja"]
+[gd_scene load_steps=7 format=3 uid="uid://cnglhteff4gja"]
 
+[ext_resource type="Script" uid="uid://dghmrxgdjrb0r" path="res://game_manager.gd" id="1_2qqqv"]
 [ext_resource type="Texture2D" uid="uid://dv64fkh24i4oh" path="res://main-scene-bg.jpeg" id="1_g4qto"]
 [ext_resource type="PackedScene" uid="uid://bwkjsdx2j4in1" path="res://flower.tscn" id="2_hr5et"]
 [ext_resource type="Script" path="res://bug_spawner.gd" id="3_61od6"]
 [ext_resource type="PackedScene" uid="uid://rify5rhmk5ek" path="res://bugs.tscn" id="4_6mfv6"]
+
 [ext_resource type="PackedScene" uid="uid://dkg4wbhthwutd" path="res://butterfly_spawner.tscn" id="5_6mfv6"]
+
+[ext_resource type="Texture2D" uid="uid://2bv7ock784i0" path="res://heart.png" id="6_we1jl"]
+
 
 [node name="mainscene" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("1_2qqqv")
+
+[node name="bg" type="Sprite2D" parent="."]
 position = Vector2(578, 324)
 scale = Vector2(0.883, 0.883)
 texture = ExtResource("1_g4qto")
-metadata/_edit_lock_ = true
 
 [node name="Flower" parent="." instance=ExtResource("2_hr5et")]
-position = Vector2(600, 470)
+position = Vector2(563, 450)
 scale = Vector2(0.3, 0.3)
 
-[node name="bug_spawner" type="Node2D" parent="." node_paths=PackedStringArray("flower")]
+[node name="bug_spawner" type="Node2D" parent="."]
 script = ExtResource("3_61od6")
 bug_scene = ExtResource("4_6mfv6")
+
 flower = NodePath("../Flower")
 
 [node name="ButterflySpawner" parent="." instance=ExtResource("5_6mfv6")]
+
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hearts" type="HBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.372
+anchor_top = 0.035
+anchor_right = 0.469
+anchor_bottom = 0.065
+offset_right = 1214.0
+offset_bottom = 376.0
+scale = Vector2(0.15, 0.15)
+
+[node name="TextureRect" type="TextureRect" parent="UI/Hearts"]
+layout_mode = 2
+texture = ExtResource("6_we1jl")
+
+[node name="TextureRect2" type="TextureRect" parent="UI/Hearts"]
+layout_mode = 2
+texture = ExtResource("6_we1jl")
+
+[node name="TextureRect3" type="TextureRect" parent="UI/Hearts"]
+layout_mode = 2
+texture = ExtResource("6_we1jl")
+
+[node name="TextureRect4" type="TextureRect" parent="UI/Hearts"]
+layout_mode = 2
+texture = ExtResource("6_we1jl")
+
+[node name="TextureRect5" type="TextureRect" parent="UI/Hearts"]
+layout_mode = 2
+texture = ExtResource("6_we1jl")
+

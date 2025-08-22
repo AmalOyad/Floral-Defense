@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnglhteff4gja"]
+[gd_scene load_steps=10 format=3 uid="uid://cnglhteff4gja"]
 
 [ext_resource type="Script" uid="uid://dghmrxgdjrb0r" path="res://game_manager.gd" id="1_2qqqv"]
 [ext_resource type="Texture2D" uid="uid://dv64fkh24i4oh" path="res://main-scene-bg.jpeg" id="1_g4qto"]
 [ext_resource type="PackedScene" uid="uid://bwkjsdx2j4in1" path="res://flower.tscn" id="2_hr5et"]
 [ext_resource type="Script" uid="uid://cmntoq6ngdw6g" path="res://bug_spawner.gd" id="3_61od6"]
 [ext_resource type="PackedScene" uid="uid://rify5rhmk5ek" path="res://bugs.tscn" id="4_6mfv6"]
+[ext_resource type="Script" uid="uid://ck1f0n7wq21jq" path="res://flower.gd" id="4_vuu3o"]
 [ext_resource type="Texture2D" uid="uid://2bv7ock784i0" path="res://heart.png" id="6_we1jl"]
 [ext_resource type="Script" uid="uid://drqo6uj6mdgeg" path="res://butterfly_spawner.gd" id="7_we1jl"]
 [ext_resource type="PackedScene" uid="uid://by1hvf03uf4u4" path="res://butterfly.tscn" id="8_bnlnp"]
@@ -22,6 +23,7 @@ texture = ExtResource("1_g4qto")
 [node name="Flower" parent="." instance=ExtResource("2_hr5et")]
 position = Vector2(563, 450)
 scale = Vector2(0.3, 0.3)
+script = ExtResource("4_vuu3o")
 
 [node name="bug_spawner" type="Node2D" parent="."]
 script = ExtResource("3_61od6")

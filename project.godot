@@ -14,3 +14,8 @@ config/name="floral defense"
 run/main_scene="uid://yjvq7gt0wr80"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Bgmusic="*res://bg-music.tscn"
+SFX="*res://sound_effects.tscn"

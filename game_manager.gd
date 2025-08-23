@@ -9,6 +9,8 @@ func lose_heart():
 	hearts -= 1
 	print("Hearts left: ", hearts)
 	
+	SFX.play()
+	
 	if hearts_ui.get_child_count() > 0:
 		var heart_node = hearts_ui.get_child(hearts)
 		heart_node.visible = false
@@ -17,16 +19,15 @@ func lose_heart():
 		game_over()
 	
 func game_over():
+	Bgmusic.stop()
+	SFX.play()
 	get_tree().change_scene_to_file("res://gameOver.tscn")
 	
 
 func win():
-	if score == 100:
-		print("You Win!") # Add the pop up for game over - you win here
-		for bug in get_tree().get_nodes_in_group("bugs"):
-			bug.speed = 0
-		for butterfly in get_tree().get_nodes_in_group("butterflies"):
-			butterfly.speed = 0
+	if score >= 100:
+		print("You Win!")
+		get_tree().change_scene_to_file("res://win.tscn")
 
 func gain_heart():
 	score += 5

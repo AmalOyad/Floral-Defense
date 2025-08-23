@@ -10,9 +10,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0
-offset_top = -1.0
+offset_top = 2.0
 offset_right = 2.0
-offset_bottom = -1.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gmbdk")
@@ -47,14 +47,15 @@ metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 782.0
-offset_top = 413.0
-offset_right = 1105.0
-offset_bottom = 637.0
+offset_left = 777.0
+offset_top = 392.0
+offset_right = 1100.0
+offset_bottom = 623.0
 scale = Vector2(1.05, 1.05)
 text = "Tips:
 - Dont let any of the insects destory your flower!
-- click on the insects to kill them
+- Use the left and right arrow keys to move the flower out of the way!
+- click on the insects to kill them!!
 - try and click all the different insects and see what makes you win!
 Good Luck!"
 autowrap_mode = 3

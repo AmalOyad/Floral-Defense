@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1ljdqv1fvof8"]
+
+[ext_resource type="AudioStream" uid="uid://cr0rft0ivue51" path="res://lose.mp3" id="1_sgcea"]
+
+[node name="losebg" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_sgcea")

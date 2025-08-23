@@ -6,7 +6,7 @@ func _ready():
 	position = Vector2(520,500)
 	
 	
-func _process(delta):
+func _process(_delta):
 	velocity.x = 0
 	if Input.is_action_pressed("ui_left"):
 		velocity.x = -speed
